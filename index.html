@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akıllı Park Sistemi</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .header-bg {
+            background-image: url('arkaplan.jpg'); /* Buraya arka plan resminizin yolunu ekleyin */
+            background-size: cover;
+            background-position: center 20%;
+        }
+        .team-member img {
+            width: 200px; /* Resimlerin genişliğini ayarlayın */
+            height: 200px; /* Resimlerin yüksekliğini ayarlayın */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-bg text-white text-center py-5">
+        <div class="container">
+            <h1>Akıllı Park Sistemi</h1>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Akıllı Park Sistemi</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teknik.html">Teknik Detaylar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="surec.html">Proje Süreçleri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sunum.html">Sunum ve Poster</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container my-5">
+        <!-- Kahraman Bölümü -->
+        <section class="hero bg-light text-center py-5">
+            <div class="container">
+                <h2>Akıllı Park Sistemi ile Tanışın</h2>
+                <p>Park sorunlarına akıllı çözümler sunan yenilikçi sistemimizle tanışın.</p>
+                <a href="teknik.html" class="btn btn-primary btn-lg">Teknik Detaylar</a>
+            </div>
+        </section>
+        <!-- Özellikler Bölümü -->
+        <section class="features text-center py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <i class="fas fa-car fa-3x mb-3"></i>
+                            <h3>Kolay Park</h3>
+                            <p>Akıllı sensörler sayesinde park yerinizi kolayca bulun.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <i class="fas fa-shield-alt fa-3x mb-3"></i>
+                            <h3>Güvenli</h3>
+                            <p>Gelişmiş güvenlik özellikleri ile aracınızı koruyun.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <i class="fas fa-mobile-alt fa-3x mb-3"></i>
+                            <h3>Mobil Uyumlu</h3>
+                            <p>Mobil cihazlarınızdan park yerinizi yönetin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Yeni Profesyonel Bölüm -->
+        <section class="professional bg-light text-center py-5">
+            <div class="container">
+                <h2>Proje Hakkında</h2>
+                <p>Akıllı Park Sistemi, park sorunlarına yenilikçi çözümler sunan bir projedir. Gelişmiş sensör teknolojisi ve mobil uyumlu arayüzü ile kullanıcıların park yerlerini kolayca bulmalarını sağlar. Güvenlik özellikleri ile aracınızı korur ve park deneyiminizi iyileştirir.</p>
+                <a href="surec.html" class="btn btn-secondary btn-lg">Daha Fazla Bilgi</a>
+            </div>
+        </section>
+        <!-- Proje Ekibi Bölümü -->
+        <section class="team bg-light text-center py-5">
+            <div class="container">
+                <h2>Proje Ekibi</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="team-member">
+                            <img src="Sıla.jpg" class="rounded-circle mb-3" alt="Ekip Üyesi 1">
+                            <h4>Meryem Sıla Fidan</h4>
+                            <p>Rapor Hazırlama</p>
+                            <p>Okul No: 2022123056</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-member">
+                            <img src="nisanur.jpg" class="rounded-circle mb-3" alt="Ekip Üyesi 2">
+                            <h4>Nisa Nur Altunkaya</h4>
+                            <p>Rapor ve Sunum Hazırlama</p>
+                            <p>Okul No: 2022123065</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-member">
+                            <img src="Neziha.jpg" class="rounded-circle mb-3" alt="Ekip Üyesi 3">
+                            <h4>Neziha Köroğlu</h4>
+                            <p>Web Sitesi Geliştirme</p>
+                            <p>Okul No: 2023123359</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-member">
+                            <img src="Şevval.jpg" class="rounded-circle mb-3" alt="Ekip Üyesi 4">
+                            <h4>Şevval Keskin</h4>
+                            <p>Donanım ve Afiş Tasarımı</p>
+                            <p>Okul No: 2022123010</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-member">
+                            <img src="Tuğçe.jpg" class="rounded-circle mb-3" alt="Ekip Üyesi 5">
+                            <h4>Tuğçe Çatak</h4>
+                            <p>Yazılım Geliştirme</p>
+                            <p>Okul No: 2022123036</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+           
+            <p>&copy; 2024 Akıllı Park Sistemi</p>
+        </div>
+    </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>

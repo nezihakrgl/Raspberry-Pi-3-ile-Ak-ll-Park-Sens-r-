@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknik Detaylar</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="bg-dark text-white text-center py-5">
+        <div class="container">
+            <h1>Teknik Detaylar</h1>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Akıllı Park Sistemi</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teknik.html">Teknik Detaylar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="surec.html">Proje Süreçleri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sunum.html">Sunum ve Poster</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-12">
+                <section>
+                    <h2>Mikroişlemci Yazılım Modeli</h2>
+                    <p>
+                        <strong>Yazılımın Genel Yapısı:</strong> Akıllı Park Sensörü Sistemi, Raspberry Pi üzerinde
+                        çalışan bir Python yazılımı ile kontrol edilir. Yazılım, ultrasonik sensörlerden gelen verileri
+                        işleyerek mesafe hesaplamaları yapar ve bu verileri kullanarak sürücülere sesli (buzzer) ve
+                        görsel (LED) geri bildirim sağlar.
+                    </p>
+                    <p>
+                        <strong>Sensör Verilerinin İşlenmesi:</strong>
+                    <ul>
+                        <li><strong>Ultrasonik Sensörler (HC-SR04):</strong> Sensörler, ses dalgaları gönderir ve geri
+                            dönen yankıyı ölçerek mesafeyi hesaplar. Python kodu, sensörlerden gelen sinyalleri alır ve
+                            mesafe hesaplamalarını gerçekleştirir.</li>
+                        <li><strong>Mesafe Hesaplama:</strong> Mesafe, ses dalgalarının gönderilme ve geri dönme süresi
+                            ölçülerek hesaplanır. Python kodu, bu süreyi kullanarak mesafeyi milimetre cinsinden
+                            hesaplar.</li>
+                    </ul>
+                    </p>
+                    <p>
+                        <strong>Geri Bildirim Mekanizması:</strong>
+                    <ul>
+                        <li><strong>Buzzer:</strong> Mesafe belirli bir sınırın altına düştüğünde sesli uyarı verilir.
+                            Python kodu, mesafe verilerini analiz eder ve belirli bir eşik değerin altına düştüğünde
+                            buzzer'ı etkinleştirir.</li>
+                        <li><strong>LED:</strong> Mesafe belirli bir sınırın altına düştüğünde görsel uyarı verilir.
+                            Python kodu, mesafe verilerini analiz eder ve belirli bir eşik değerin altına düştüğünde
+                            LED'i etkinleştirir.</li>
+                    </ul>
+                    </p>
+                    <p>
+                        <strong>Yazılım Akış Şeması:</strong>
+                    <ul>
+                        <li><strong>Başlat:</strong> Raspberry Pi ve sensörler başlatılır.</li>
+                        <li><strong>Veri Toplama:</strong> Ultrasonik sensörlerden veri alınır.</li>
+                        <li><strong>Mesafe Hesaplama:</strong> Alınan veriler kullanılarak mesafe hesaplanır.</li>
+                        <li><strong>Geri Bildirim:</strong> Mesafe belirli bir sınırın altına düştüğünde buzzer ve LED
+                            etkinleştirilir.</li>
+                        <li><strong>Döngü:</strong> Bu süreç sürekli olarak tekrarlanır.</li>
+                    </ul>
+                    </p>
+                </section>
+                <section>
+                    <h2>Kullanılan Donanım Bileşenleri</h2>
+                    <p>
+                        <strong>Raspberry Pi:</strong> Raspberry Pi, projenin merkezi kontrol birimidir. Python
+                        yazılımı, Raspberry Pi üzerinde çalışır ve sensörlerden gelen verileri işleyerek geri bildirim
+                        mekanizmalarını kontrol eder.
+                    </p>
+                    <p>
+                        <strong>Ultrasonik Sensörler (HC-SR04):</strong> Ultrasonik sensörler, ses dalgaları göndererek
+                        ve geri dönen yankıyı ölçerek mesafeyi hesaplar. Bu sensörler, araçların park yerindeki
+                        mesafelerini doğru bir şekilde ölçmek için kullanılır.
+                    </p>
+                    <p>
+                        <strong>Buzzer:</strong> Buzzer, sesli geri bildirim sağlamak için kullanılır. Mesafe belirli
+                        bir sınırın altına düştüğünde, buzzer etkinleştirilir ve sürücülere sesli uyarı verir.
+                    </p>
+                    <p>
+                        <strong>LED:</strong> LED, görsel geri bildirim sağlamak için kullanılır. Mesafe belirli bir
+                        sınırın altına düştüğünde, LED etkinleştirilir ve sürücülere görsel uyarı verir.
+                    </p>
+                    <p>
+                        <strong>GPIO Pinleri:</strong> GPIO pinleri, Raspberry Pi ile donanım bileşenleri arasındaki
+                        bağlantıyı sağlar. Sensörler, buzzer ve LED, GPIO pinleri aracılığıyla Raspberry Pi'ye bağlanır
+                        ve Python kodu ile kontrol edilir.
+                    </p>
+                </section>
+                <section>
+                    <h2>Yazılım Kodları</h2>
+                    <pre class="bg-dark text-white p-3 rounded">
+<code>
+import RPi.GPIO as GPIO # GPIO pinlerini kontrol etmek için kullanılan kütüphane
+import time # Zamanla ilgili işlemler yapmak için kullanılan kütüphane
+
+# GPIO pin numaraları
+TRIG = 23 # Ultrasonik sensörün TRIG pini
+ECHO = 24 # Ultrasonik sensörün ECHO pini
+BUZZER = 18 # Buzzer pini
+LED_PIN = 25 # LED pini
+
+# GPIO ayarları
+GPIO.setmode(GPIO.BCM) # Pin numaralandırmasında BCM modunu seçer
+GPIO.setup(TRIG, GPIO.OUT) # TRIG pinini çıkış olarak ayarlar
+GPIO.setup(ECHO, GPIO.IN) # ECHO pinini giriş olarak ayarlar
+GPIO.setup(BUZZER, GPIO.OUT) # Buzzer pinini çıkış olarak ayarlar
+GPIO.setup(LED_PIN, GPIO.OUT) # LED pinini çıkış olarak ayarlar
+
+# Mesafe ölçüm fonksiyonu
+def mesafe_sensor():
+    GPIO.output(TRIG, True) # TRIG pinine lojik 1 gönderir
+    time.sleep(0.00001) # 10 mikro saniye bekler
+    GPIO.output(TRIG, False) # TRIG pinini lojik 0 yapar
+
+    # ECHO pini lojik 1 olana kadar bekler (ses dalgası henüz dönmedi)
+    while GPIO.input(ECHO) == 0:
+        pulse_start = time.time() # Ses dalgasının gönderildiği zamanı kaydeder
+
+    # ECHO pini lojik 0 olana kadar bekler (ses dalgası geri döndü)
+    while GPIO.input(ECHO) == 1:
+        pulse_end = time.time() # Ses dalgasının geri döndüğü zamanı kaydeder
+
+    # Ses dalgasının gidip gelme süresini hesaplar
+    pulse_duration = pulse_end - pulse_start
+
+    # Mesafeyi santimetre cinsine çevirir (34300 cm/s ÷ 2 = 17150)
+    distance = pulse_duration * 17150
+    distance = round(distance, 2) # Mesafeyi 2 ondalık basamağa yuvarlar
+    return distance # Ölçülen mesafeyi döndürür
+
+# Buzzer ve LED uyarı fonksiyonu
+def buzzer_uyarisi(mesafe):
+    if mesafe < 10: # Mesafe 10 cm'den küçükse
+        GPIO.output(BUZZER, True) #Buzzer'ı açar
+        time.sleep(0.1) # 0.1 saniye bekler
+        GPIO.output(BUZZER, False) # Buzzer'ı kapatır
+        time.sleep(0.1) # 0.1 saniye bekler
+        GPIO.output(BUZZER, False) # Buzzer'ı kapatır
+        GPIO.output(LED_PIN, True) # LED'i açar
+        time.sleep(0.1) # 0.1 saniye bekler
+        GPIO.output(LED_PIN, False) # LED'i kapatır
+
+       elif mesafe < 20: # Mesafe 10–20 cm arasındaysa
+       GPIO.output(BUZZER, True) # Buzzer'ı açar
+       time.sleep(0.3) # 0.3 saniye bekler
+       GPIO.output(BUZZER, False) # Buzzer'ı kapatır
+       GPIO.output(LED_PIN, True) # LED'i açar
+       time.sleep(0.3) # 0.3 saniye bekler
+       GPIO.output(LED_PIN, False) # LED'i kapatır
+
+       elif mesafe < 30: # Mesafe 20–30 cm arasındaysa
+       GPIO.output(BUZZER, True) # Buzzer'ı açar
+       time.sleep(0.5) # 0.5 saniye bekler
+       GPIO.output(BUZZER, False) # Buzzer'ı kapatır
+       GPIO.output(LED_PIN, True) # LED'i açar
+       time.sleep(0.5) # 0.5 saniye bekler
+       GPIO.output(LED_PIN, False) # LED'i kapatır
+
+       else: # Mesafe 30 cm'den büyükse
+       GPIO.output(BUZZER, False) # Buzzer'ı kapatır
+       GPIO.output(LED_PIN, False) # LED'i kapatır
+
+       # Ana program
+       try:
+       while True: # Sonsuz döngü
+       mesafe = mesafe_sensor() # Mesafe ölçer
+       print(f"Mesafe: {mesafe} cm") # Ölçülen mesafeyi ekrana yazdırır
+       buzzer_uyarisi(mesafe) # Ölçülen mesafeye göre uyarı verir
+       time.sleep(0.03) # Döngü için kısa bir bekleme süresi
+       except KeyboardInterrupt: # Kullanıcı Ctrl+C ile programı durdurursa
+       print("Ölçüm sonlandırıldı.") # Programın durdurulduğunu belirtir
+       GPIO.cleanup() # GPIO pinlerini temizler    
