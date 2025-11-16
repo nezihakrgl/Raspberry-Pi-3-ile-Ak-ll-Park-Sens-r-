@@ -1,0 +1,20 @@
+# Python cache klasörleri
+__pycache__/
+*.py[cod]
+
+# Sanal ortam klasörleri
+venv/
+ENV/
+.env
+
+# Log dosyaları
+*.log
+
+# İşletim sistemi dosyaları
+.DS_Store
+Thumbs.db
+
+# IDE / editör dosyaları
+.vscode/
+.idea/
+*.iml
